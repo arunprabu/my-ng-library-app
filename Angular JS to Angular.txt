@@ -1,0 +1,105 @@
+AngularJS v 1 to Angular 2+ Guide & References
+========
+  You have three options. Choose anyone
+  --
+  1. migrate 
+      ideal steps 
+      ---
+        essential step: update angular js to angular js v 1.5 
+        integrate angular 2+ within angular v1 app (downgrade it work with angular js v 1)
+        upgrade angular js v 1.5 to angular 2+
+        run the app. (dual boot)
+        infect angular js v 1 with angular 2+ codebase
+        trial and error  
+        remove angular js at last. 
+        migration ends 
+
+
+  2. rewrite in Angular 2+ (expensive)
+      if you have unit testing in angular js v1 app, 
+        rewrite unit testing in angular 2+ (this will ensure that you will never miss out any feature )
+      
+      if the app is smaller to medium 
+      spend lot of time in testing 
+      features might be missed out 
+      
+      if the uniting is not there in old angular js v 1 app, 
+        rewriting the code requires lot of testing. 
+
+  3. going hybrid (angular Js vs 1 and Angular 2+ will work together)
+      running both angular js v1 and angular 2+ codebase together 
+      Angular 2+ (full control )
+      ---
+      possible disadvantages
+      --- 
+        performance issues 
+
+
+  Understanding The differences
+  ---
+  Angular JS                    Angular 2+
+  ---------------------------------------------
+  1. Controllers              = Components 
+  2. Directives with HTML     = Components 
+  3. Directives without HTML  = Directives (You have to rewrite )
+  4. Services                 = Services 
+      Promise                 =    RxJS & Promise
+  5. Factory                  = Services 
+  6. Filters                  = Pipes  (You have to rewrite)
+  7. Modules                  = Modules (you have to rewrite)
+  
+  Concepts
+  8. Dependency Injection with strings  = DI with Classes or any.
+  
+  Syntax Differences
+  =====
+    ng-model  = [(ngModel)] 
+    ng-if     = *ngIf 
+  
+
+  URL's 
+  ---
+    thinking in angular 
+      identify the components
+      map them to the url's 
+    you decide about routing 
+
+
+  Coding
+  -----
+  JS  = TS  
+
+  Dependency Management
+  -----
+  Bower = NPM
+    first opt for the exact version of the depencies during migration. 
+
+
+  Build Tools
+  ------
+  Grunt/Gulp/Browserify = Webpack 
+
+Note: If your app is not in AngularJs v1.5 then, you should migrate to AngularJS 1.5. 
+      Because, it has components. 
+      So, we can later convert AngularJS v 1.5 components to Angular 2+ Components.
+      Recommending to migrate to at least AngularJS 1.5 which introduced components to 
+      the AngularJS eco-system. This will make our migration process a lot easier!
+
+
+How can be done?
+  * Filters in AngularJS cannot be migrated and will have to be re-written as Pipes 
+  during the migration process.
+  * Some directives (those without templates) will need to be re-written as Angular Directives.
+
+
+======
+
+Let's begin..
+===
+  Let's clone Angular Js v 1 project 
+    git clone https://github.com/jawache/angularjs-migration.git
+
+    refer for setting up. 
+    https://codecraft.tv/courses/angularjs-migration/case-study/project-setup/
+
+    

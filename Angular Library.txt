@@ -27,7 +27,7 @@ Let's now create a Library
 
   Check the my-weather-lib's package.json 
 
-  And the package.json of my-big-app and tsconfig.json also
+  And the package.json of my-big-app and tsconfig.json also.
 
   Library has been created. Let's now look at create an angular app. 
 
